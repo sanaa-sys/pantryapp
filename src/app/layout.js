@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
-import "./globals.css
-import {firebaseConfig} from '@/firebase'
+import "./globals.css";
+import { firebaseConfig } from '@/firebase';
 import { FirebaseAppProvider } from 'reactfire';
 
 
