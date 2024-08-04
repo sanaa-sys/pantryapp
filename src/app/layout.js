@@ -1,5 +1,8 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./globals.css
+import {firebaseConfig} from '@/firebase'
+import { FirebaseAppProvider } from 'reactfire';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,8 +13,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <html lang="en">
+          <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+              <body className={inter.className}>{children}</body>
+          </FirebaseAppProvider>
     </html>
   );
 }
